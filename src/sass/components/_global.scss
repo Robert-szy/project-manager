@@ -1,0 +1,24 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: $color-text-selected;
+  font-family: $font-text;
+  font-size: 14px;
+  line-height: 1.7;
+  font-weight: $font-normal;
+  color: $color-text;
+}
+
+.container {
+  max-width: 1056px;
+  margin: 20px;
+  padding: 20px;
+  background-color: $color-white;
+}
+
+.inner {
+  padding: 30px 168px 38px 168px;
+}

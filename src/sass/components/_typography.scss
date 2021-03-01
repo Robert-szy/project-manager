@@ -1,0 +1,52 @@
+h1 {
+  font-family: $font-text;
+  font-size: 24px;
+  font-weight: $font-medium;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: $font-text;
+  font-size: 16px;
+  font-weight: $font-medium;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: $font-text;
+  font-size: 16px;
+  font-weight: $font-bold;
+}
+
+p {
+  font-family: $font-text;
+  font-size: 14px;
+  font-weight: $font-light;
+  //strong {
+  //  font-weight: $font-medium;
+  //}
+}
+
+a {
+  font-family: $font-text;
+  font-size: 13px;
+  font-weight: $font-light;
+  color: $color-link;
+  text-decoration: none;
+  // dlaczego taki zapis poniżej nie działa tylko działa jak osobno (jeszcze niżej)
+  //:hover {
+  //  color: $color-link-hover;
+  //}
+}
+
+a:hover{
+  color: $color-link-hover;
+}
+
+li {
+  font-family: $font-text;
+  font-size: 11px;
+  font-weight: $font-light;
+  text-transform: uppercase;
+}
+
