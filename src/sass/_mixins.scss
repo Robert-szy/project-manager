@@ -1,2 +1,38 @@
 /* Mixins */
 
+@mixin notification-base {
+  color: $color-white;
+  font-family: $font-text;
+  font-size: 14px;
+  font-weight: $font-light;
+  text-align: center;
+
+}
+
+@mixin font-base-bold {
+  color: $color-white;
+  font-family: $font-text;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@mixin font-base-light {
+  color: $color-white;
+  font-family: $font-text;
+  font-size: 16px;
+  font-weight: light;
+}
+
+@mixin font-number-values {
+  color: $color-white;
+  font-family: $font-text;
+  font-size: 16px;
+  font-weight: light;
+}
+
+@mixin font-dates {
+  color: $color-white;
+  font-family: $font-text;
+  font-size: 14px;
+  font-weight: light;
+}

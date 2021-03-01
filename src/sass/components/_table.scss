@@ -1,0 +1,7 @@
+.table-text {
+  @include font-base-bold;
+}
+
+.table-value {
+  @include font-number-values;
+}

@@ -1,0 +1,48 @@
+.wallet {
+ font-family: $font-text;
+ font-size: 20px;
+ font-weight: $font-normal;
+ line-height: 35px;
+ text-align: center;
+ display: flex;
+ flex: 1 150px;
+ max-width: 150px;
+ margin: 5px;
+ align-self: flex-end;
+}
+
+.profile {
+  font-family: $font-text;
+  font-size: 13px;
+  line-height: 35px;
+  font-weight: $font-light;
+  color: $color-link;
+  text-transform: none;
+  text-align: center;
+  display: flex;
+  flex: 1 150px;
+  max-width: 150px;
+  margin: 5px;
+  align-self: flex-end;
+}
+
+.notification-neg {
+  background-color: $color-neg-notification;
+  @include notification-base;
+}
+
+.notification-neg:hover {
+  background-color: $color-neg-notification-hover;
+  @include notification-base;
+}
+
+
+.notification-pos {
+  background-color: $color-pos-notification;
+  @include notification-base;
+}
+
+.notification-pos:hover {
+  background-color: $color-pos-notication-hover;
+  @include notification-base;
+}

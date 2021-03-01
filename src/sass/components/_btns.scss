@@ -1,11 +1,8 @@
 // Buttons
 
 .btn-orange {
-  font-size: 16px;
-  font-weight: $font-light;
-  font-family: $font-text;
+  @include font-base-light;
   background: $color-btn;
-  color: $color-white;
   border-radius: $radius;
   display: flex;
   flex: flex-basis;
@@ -32,11 +29,8 @@
 }
 
 .btn-grey{
+  @include font-base-light;
   background: $color-header;
-  font-size: 16px;
-  font-weight: $font-light;
-  font-family: $font-text;
-  color: $color-white;
   border-radius: $radius;
   display: flex;
   flex: flex-basis;

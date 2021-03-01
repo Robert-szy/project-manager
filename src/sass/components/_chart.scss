@@ -1,0 +1,7 @@
+.chart {
+  background-color: $color-white;
+}
+
+.chart-title{
+  @include font-base-bold;
+}
