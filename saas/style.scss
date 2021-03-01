@@ -4,7 +4,14 @@
 @import "layout";
 
 /* Components */
-//@import "components/form_field";
+@import "components/global";
+@import "components/btns";
+@import "components/chart";
+@import "components/date-filter";
+@import "components/header";
+@import "components/sidebar";
+@import "components/table";
+@import "components/title";
 
 /* Sections */
 //@import "section/registration_form";

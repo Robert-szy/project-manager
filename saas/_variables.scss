@@ -1,3 +1,5 @@
+/* Variables */
+
 /* Colors */
 $paragraph-color: #333333;
 $header-color: #979797;
@@ -15,9 +17,17 @@ $red-color: #ff0000;
 $green-color: #04ae00;
 $white-color: #ffffff;
 
+/* Fonts */
+$paragraph-font: "Roboto", Helvetica, Arial;
+$font-light: 300;
+$font-normal: 400;
+$font-medium: 500;
+$font-bold: 700;
+
 /* Font sizes */
 $paragraph-font-size: 16px;
 
-/* Fonts */
-$brand-font: "Open Sans", Helvetica, Arial;
-$paragraph-font: "Open Sans", Helvetica, Arial;
+/* Other */
+$transition: all 1s;
+$radius: 5px;
+
