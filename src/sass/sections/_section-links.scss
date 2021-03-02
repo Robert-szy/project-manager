@@ -1,0 +1,41 @@
+.links-container {
+  display: flex;
+  flex-direction: column;
+  width: 684px;
+  margin: 22px auto;
+  background-color: $color-white;
+  justify-content: center;
+  align-items: center;
+  //padding-top: ;
+}
+
+.links-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: nowrap;
+  background-color: $color-white;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: $color-header-selected;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.links-row:hover {
+  background-color: $color-tab-hover;
+}
+
+.links-elem {
+  flex: 1 30%;
+  flex-grow: 1;
+  text-align: center;
+  background: none;
+}
+
+.links-container a:last-of-type {
+  margin-top: 24px;
+}

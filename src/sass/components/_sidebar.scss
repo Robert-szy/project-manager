@@ -1,7 +1,17 @@
 .sidebar-link{
   @include font-dates;
+  padding-left: 18px;
+  padding-top: 10px;
+  margin: 0;
+  &:hover {
+    background-color: $color-sidebar-selected;
+    border-left: 3px solid;
+    border-color: $color-btn;
+  }
 }
 
 .sidebar-manager {
   @include font-manager;
+  text-align: left;
+  padding-left: 18px;
 }

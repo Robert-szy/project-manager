@@ -1,0 +1,24 @@
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  width: 170px;
+  margin: 0 auto;
+  background-color: $color-sidebar;
+  justify-content: center;
+  align-items: center;
+  //padding-top: ;
+}
+
+.sidebar-menu {
+  flex: 1 100%;
+  margin: 0 auto;
+  width: inherit;
+  //padding-left: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid;
+  border-color: $color-header;
+}
+
+.sidebar-menu:last-of-type {
+  border: none;
+}

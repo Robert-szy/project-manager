@@ -32,14 +32,14 @@
 }
 
 @mixin font-dates {
-  color: $color-text;
+  color: $color-header;
   font-family: $font-text;
   font-size: 14px;
   font-weight: $font-light;
 }
 
 @mixin font-manager {
-  color: $color-text;
+  color: $color-header;
   font-family: $font-text;
   font-size: 14px;
   font-weight: $font-medium;
