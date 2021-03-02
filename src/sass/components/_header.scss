@@ -28,6 +28,7 @@
 
 .notification-neg {
   background-color: $color-neg-notification;
+  width: 100%;
   @include notification-base;
 }
 

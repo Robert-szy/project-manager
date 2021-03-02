@@ -1,7 +1,10 @@
 .sidebar-link{
   @include font-dates;
   padding-left: 18px;
-  padding-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: 40px;
+  line-height: 30px;
   margin: 0;
   &:hover {
     background-color: $color-sidebar-selected;

@@ -1,0 +1,26 @@
+.topbar-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  background-color: $color-white;
+  justify-content: center;
+  align-items: center;
+  //padding-top: ;
+}
+
+.topbar-menu {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 0 auto;
+  //background-color: $color-white;
+  justify-content: flex-end;
+  align-items: center;
+  //padding-top: ;
+}
+
+.topbar-item {
+  flex: 1;
+  max-width: 180px;
+}
