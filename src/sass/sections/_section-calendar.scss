@@ -1,0 +1,9 @@
+.calendar-container {
+  display: flex;
+  flex: 1 325px;
+  flex-wrap: nowrap;
+  height: 112px;
+  margin: 0 auto;
+  background-color: $color-white;
+  justify-content: center;
+}

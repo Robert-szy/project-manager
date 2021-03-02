@@ -1,0 +1,10 @@
+.chart-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 684px;
+  margin: 0 auto;
+  background-color: $color-white;
+  justify-content: center;
+  align-items: center;
+}

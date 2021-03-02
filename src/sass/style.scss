@@ -4,19 +4,23 @@
 @import "layout";
 
 /* Components */
+@import "components/typography";
 @import "components/global";
+@import "components/btns";
 @import "components/chart";
 @import "components/date-filter";
 @import "components/header";
 @import "components/sidebar";
 @import "components/table";
 @import "components/title";
-@import "components/typography";
-@import "components/btns";
-
 
 /* Sections */
-//@import "section/registration_form";
+@import "sections/section-calendar";
+@import "sections/section-chart";
+@import "sections/section-table";
+@import "sections/section-links";
+@import "sections/section-sidebar";
+@import "sections/section-topbar";
 
 /* Pages / Views */
 //@import "pages/registration";

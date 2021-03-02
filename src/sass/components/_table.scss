@@ -1,5 +1,7 @@
 .table-text {
   @include font-base-bold;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .table-value {

@@ -6,14 +6,15 @@
   font-size: 14px;
   font-weight: $font-light;
   text-align: center;
-
+  height: 40px;
+  line-height: 40px;
 }
 
 @mixin font-base-bold {
-  color: $color-white;
+  color: $color-text;
   font-family: $font-text;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: $font-bold;
 }
 
 @mixin font-base-light {
@@ -24,15 +25,23 @@
 }
 
 @mixin font-number-values {
-  color: $color-white;
+  color: $color-text;
   font-family: $font-text;
   font-size: 16px;
-  font-weight: light;
+  font-weight: $font-light;
 }
 
 @mixin font-dates {
-  color: $color-white;
+  color: $color-text;
   font-family: $font-text;
   font-size: 14px;
-  font-weight: light;
+  font-weight: $font-light;
+}
+
+@mixin font-manager {
+  color: $color-text;
+  font-family: $font-text;
+  font-size: 14px;
+  font-weight: $font-medium;
+  text-transform: uppercase;
 }
