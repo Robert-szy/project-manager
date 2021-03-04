@@ -35,6 +35,7 @@
 .notification-neg:hover {
   background-color: $color-neg-notification-hover;
   @include notification-base;
+  transition: $transition;
 }
 
 
@@ -46,4 +47,5 @@
 .notification-pos:hover {
   background-color: $color-pos-notication-hover;
   @include notification-base;
+  transition: $transition;
 }

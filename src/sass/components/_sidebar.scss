@@ -6,10 +6,12 @@
   height: 40px;
   line-height: 30px;
   margin: 0;
+
   &:hover {
     background-color: $color-sidebar-selected;
     border-left: 3px solid;
     border-color: $color-btn;
+    transition: $transition;
   }
 }
 

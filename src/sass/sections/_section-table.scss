@@ -22,3 +22,25 @@
   margin-right: 10px;
   border-bottom: 1px solid;
 }
+
+/*Media*/
+@media (max-width: 767px) {
+  .table-row {
+    flex-direction: column;
+  }
+
+  .table-container {
+    margin-bottom: 20px;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .table-row {
+    flex-direction: column;
+  }
+
+  .table-container {
+    padding-bottom: 20px;
+  }
+}

@@ -24,3 +24,10 @@
   flex: 1;
   max-width: 180px;
 }
+
+/*Media*/
+@media (max-width: 767px) {
+  .topbar-item:last-of-type {
+    display: none;
+  }
+}

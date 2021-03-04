@@ -1,12 +1,11 @@
 .links-container {
   display: flex;
   flex-direction: column;
-  width: 684px;
+  width: 100%;
   margin: 22px auto;
   background-color: $color-white;
   justify-content: center;
   align-items: center;
-  //padding-top: ;
 }
 
 .links-row {
@@ -27,6 +26,7 @@
 
 .links-row:hover {
   background-color: $color-tab-hover;
+  transition: $transition;
 }
 
 .links-elem {
@@ -38,4 +38,13 @@
 
 .links-container a:last-of-type {
   margin-top: 24px;
+}
+
+/*Media*/
+@media (max-width: 767px) {
+  .links-row {
+    flex-direction: column;
+    height: auto;
+  }
+
 }
