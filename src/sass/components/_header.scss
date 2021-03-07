@@ -29,6 +29,7 @@
 .notification-neg {
   background-color: $color-neg-notification;
   width: 100%;
+  margin-top: 0;
   @include notification-base;
 }
 
@@ -41,6 +42,7 @@
 
 .notification-pos {
   background-color: $color-pos-notification;
+  margin-top: 0;
   @include notification-base;
 }
 
