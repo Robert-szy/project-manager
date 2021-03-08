@@ -1,14 +1,46 @@
 .chart-container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+  //flex-wrap: wrap;
   width: 100%;
   margin: 0 auto;
+  padding-right: 188px;
+  padding-left: 188px;
   background-color: $color-white;
+  color: $color-header;
   justify-content: center;
   align-items: center;
 
   img{
     width: 100%;
+    padding-top: 5px;
+    padding-bottom: 20px;
+  }
+
+  h2 {
+    text-align: left;
+    align-self: start;
+  }
+}
+
+/*Media*/
+@media (max-width: 767px) {
+  .chart-container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .chart-container {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1384px) {
+  .chart-container {
+    padding-left: 90px;
+    padding-right: 90px;
   }
 }

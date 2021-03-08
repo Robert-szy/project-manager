@@ -1,9 +1,42 @@
 .calendar-container {
   display: flex;
+  flex-direction: column;
   flex: 1 325px;
   flex-wrap: nowrap;
   height: 112px;
   margin: 0 auto;
+  padding-right: 188px;
+  padding-left: 188px;
   background-color: $color-white;
   justify-content: center;
+  align-items: center;
+  color: $color-header;
+
+  h2 {
+    text-align: left;
+    justify-self: start;
+    align-self: start;
+  }
+}
+
+/*Media*/
+@media (max-width: 767px) {
+  .calendar-container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .calendar-container {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1384px) {
+  .calendar-container {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
 }
