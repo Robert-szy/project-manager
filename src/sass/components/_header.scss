@@ -13,17 +13,17 @@
 
 .profile {
   font-family: $font-text;
-  font-size: 13px;
+  //font-size: 13px;
   line-height: 35px;
   font-weight: $font-light;
   color: $color-link;
   text-transform: none;
   text-align: center;
-  display: flex;
-  flex: 1 150px;
+  //display: flex;
+  //flex: 1 150px;
   max-width: 150px;
   margin: 5px;
-  align-self: flex-end;
+  //align-self: flex-end;
 }
 
 .notification-neg {
