@@ -6,6 +6,7 @@
   margin: 0 auto;
   justify-content: center;
   align-items: flex-start;
+  z-index: 2;
 }
 
 .topbar {
@@ -22,10 +23,7 @@
 .main {
   margin-left: 206px;
   margin-right: 18px;
-  margin-top: 90px;
-
-  //padding-left: 186px;
-  //padding-right: 186px;
+  margin-top: 85px;
 }
 
 /*Media*/
@@ -38,6 +36,10 @@
 
   .topbar {
     left: 60px;
+  }
+
+  .sidebar {
+    width: 60px;
   }
 }
 
