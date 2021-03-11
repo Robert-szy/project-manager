@@ -3,10 +3,11 @@
   flex-direction: column;
   flex: 1 325px;
   flex-wrap: nowrap;
-  height: 112px;
+  //height: 112px;
   margin: 0 auto;
   padding-right: 188px;
   padding-left: 188px;
+  padding-bottom: 37px;
   background-color: $color-white;
   justify-content: center;
   align-items: center;
@@ -17,6 +18,53 @@
     justify-self: start;
     align-self: start;
   }
+
+  .calendar-row {
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+
+    input {
+      border: 1px solid $color-header;
+      background-color: $color-white;
+      padding: 3px 5px;
+      width: 190px;
+    }
+
+    .button {
+      width: 40px;
+      height: 40px;
+      background-color: $color-btn;
+      //position: relative;
+      display: flex;
+      justify-content: center;
+      border-radius: 5px;
+      margin-left: 10px;
+
+      svg {
+        height: 16px;
+        width: 16px;
+        margin: 0 auto;
+        align-self: center;
+        fill: $color-white;
+      }
+
+      &:hover {
+        background-color: $color-btn-hover;
+        transition: $transition;
+      }
+    }
+
+    [type="date"] {
+      background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+    }
+    [type="date"]::-webkit-inner-spin-button {
+      display: none;
+    }
+    [type="date"]::-webkit-calendar-picker-indicator {
+      opacity: 0;
+    }
+  }
 }
 
 /*Media*/
@@ -24,6 +72,22 @@
   .calendar-container {
     padding-left: 18px;
     padding-right: 18px;
+
+    .calendar-row {
+      flex-direction: column;
+      //justify-content: center;
+      //align-content: center;
+      height: 140px;
+
+      input {
+        height: 40px;
+      }
+
+      .button {
+        margin: 10px;
+        align-self: center;
+      }
+    }
   }
 }
 

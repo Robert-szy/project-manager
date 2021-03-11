@@ -16,6 +16,10 @@
   padding-bottom: 18px;
   border-bottom: 1px solid;
   border-color: $color-header;
+
+  a .fas {
+    margin-left: 20px;
+  }
 }
 
 .sidebar-menu:last-of-type {
@@ -39,6 +43,52 @@
   overflow: visible;
   transition: width .05s linear;
   z-index: 100;
+
+  .manager {
+    padding-left: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 3px solid;
+
+    h2 {
+      flex: 100%;
+      color: $color-header;
+    }
+
+    .manager-row {
+      flex: 1;
+      display: flex;
+      text-align: left;
+      flex-direction: row;
+      justify-content: flex-start;
+      margin-bottom: 10px;
+
+      a img {
+          height: 46px;
+          width: 46px;
+        }
+
+      .online {
+        position: absolute;
+        left: 45px;
+      }
+
+      a span {
+        align-self: center;
+        margin-left: 20px;
+        color: $color-link;
+
+        &:hover {
+          color: $color-link-hover;
+          transition: $transition;
+        }
+      }
+    }
+  }
 
   .topbar-menu-insidebar {
     display: none;
@@ -144,6 +194,8 @@ a:hover, a:focus {
   text-align: center;
   vertical-align: middle;
   font-size: 20px;
+  padding-left: 11px;
+  padding-right: 10px;
 }
 
 .main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
@@ -162,6 +214,10 @@ a:hover, a:focus {
     &:hover {
       width: 188px;
       overflow: visible;
+
+      .manager h2, .manager-row span {
+        display: flex;
+      }
     }
 
     .topbar-menu-insidebar {
@@ -169,5 +225,7 @@ a:hover, a:focus {
     }
   }
 
-
+  .manager h2, .manager-row span {
+    display: none;
+  }
 }
