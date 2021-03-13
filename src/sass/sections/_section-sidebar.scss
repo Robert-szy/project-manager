@@ -44,6 +44,11 @@
   transition: width .05s linear;
   z-index: 100;
 
+  a.menu-list.active {
+    background-color: $color-sidebar-selected;
+    color: $color-white;
+  }
+
   .manager {
     padding-left: 10px;
     position: relative;
@@ -68,9 +73,9 @@
       margin-bottom: 10px;
 
       a img {
-          height: 46px;
-          width: 46px;
-        }
+        height: 46px;
+        width: 46px;
+      }
 
       .online {
         position: absolute;
@@ -205,6 +210,8 @@ a:hover, a:focus {
   border-color: $color-btn;
   transition: $transition;
 }
+
+
 
 @media (max-width: 767px) {
   .main-menu, nav.main-menu.expanded {

@@ -13,6 +13,10 @@
     border-color: $color-btn;
     transition: $transition;
   }
+
+  .active {
+    background-color: $color-sidebar-selected;
+  }
 }
 
 .sidebar-manager {
