@@ -26,6 +26,16 @@
   margin-top: 85px;
 }
 
+#pages {
+  > * {
+    display: none;
+  }
+
+  > .active {
+    display: block;
+  }
+}
+
 /*Media*/
 @media (max-width: 767px) {
   .main {

@@ -3,27 +3,85 @@ import {select, classNames, templates} from './settings.js';
 //import Home from  './components/Home.js';
 
 
+class Home {
+  constructor(app, element){
+    const thisHome = this;
+
+    thisHome.render(element);
+
+    console.log('newHome', thisHome);
+  }
+
+  render(element){
+    const thisHome = this;
+
+    const generatedHTML = templates.homePage();
+
+    thisHome.dom = {};
+    thisHome.dom.wrapper = element;
+    thisHome.dom.wrapper.innerHTML = generatedHTML;
+  }
+}
+
+class General {
+  constructor(app, element){
+    const thisGeneral = this;
+
+    thisGeneral.render(element);
+
+    console.log('newGeneral', thisGeneral);
+  }
+
+  render(element){
+    const thisGeneral = this;
+
+    const generatedHTML = templates.generalPage();
+
+    thisGeneral.dom = {};
+    thisGeneral.dom.wrapper = element;
+    thisGeneral.dom.wrapper.innerHTML = generatedHTML;
+  }
+}
+
+class Links {
+  constructor(app, element){
+    const thisLinks = this;
+
+    thisLinks.render(element);
+
+    console.log('newLinks', thisLinks);
+  }
+
+  render(element){
+    const thisLinks = this;
+
+    const generatedHTML = templates.linksPage();
+
+    thisLinks.dom = {};
+    thisLinks.dom.wrapper = element;
+    thisLinks.dom.wrapper.innerHTML = generatedHTML;
+  }
+}
+
 const app = {
   initPages: function(){
     const thisApp = this;
 
-    //thisApp.pages = document.querySelector(select.containerOf.pages).children;
+    thisApp.pages = document.querySelector(select.containerOf.pages).children;
     thisApp.navLinks = document.querySelectorAll(select.nav.links);
-    const pageRendered = document.querySelectorAll(select.containerOf.pages);
 
     const idFromHash = window.location.hash.replace('#/', '');
 
-    //let pageMatchingHash = thisApp.pages[0].id;
+    let pageMatchingHash = thisApp.pages[0].id;
 
-    //for(let page of thisApp.pages){
-    //  if(page.id == idFromHash){
-    //    pageMatchingHash = page.id;
-    //    break;
-    //  }
-    //}
+    for(let page of thisApp.pages){
+      if(page.id == idFromHash){
+        pageMatchingHash = page.id;
+        break;
+      }
+    }
 
-    //thisApp.activatePage(pageMatchingHash);
-    thisApp.render(pageRendered, idFromHash);
+    thisApp.activatePage(pageMatchingHash);
 
     for(let link of thisApp.navLinks){
       link.addEventListener('click', function(event){
@@ -35,12 +93,9 @@ const app = {
 
         /* run thisApp.activatepage with that id*/
         thisApp.activatePage(id);
-        //const container = '.' + id + '-page';
-        //const element = document.querySelector(container);
 
-        thisApp.render(pageRendered, id);
         /**change URL hash */
-        //window.location.hash = '#/' + id;
+        window.location.hash = '#/' + id;
       });
     }
 
@@ -50,10 +105,9 @@ const app = {
     const thisApp = this;
 
     /* add class 'active' to matching pages, remove from non-matching*/
-    //for(let page of thisApp.pages){
-    //  page.classList.toggle(classNames.pages.active, page.id == pageId);
-
-    //}
+    for(let page of thisApp.pages){
+      page.classList.toggle(classNames.pages.active, page.id == pageId);
+    }
 
     /* add class 'active' to matching link, remove from non-matching*/
     for(let link of thisApp.navLinks){
@@ -67,34 +121,29 @@ const app = {
     window.location.hash = '#/' + pageId;
   },
 
-  render(element, id){
+  initHome: function(){
     const thisApp = this;
-    let generatedHTML = '';
-    //const tmp = id + 'Page';
-    if (id == 'home') {
-      generatedHTML = templates.homePage();
-    } else if (id == 'general') {
-      generatedHTML = templates.generalPage();
-    } else if (id == 'links') {
-      generatedHTML = templates.linksPage();
-    }
 
-    thisApp.dom = {};
-    thisApp.dom.wrapper = element;
-    thisApp.dom.wrapper.innerHTML = generatedHTML;
+    const homeElem = document.querySelector(select.containerOf.home);
+    thisApp.home = new Home(thisApp, homeElem);
 
-    //thisHome.dom.carouselElem = document.querySelector(select.widgets.carousel.wrapper);
-    //thisHome.dom.orderElem = document.querySelector(select.home.order);
-    //thisHome.dom.bookingElem = document.querySelector(select.home.booking);
   },
 
-  //initHome: function(){
-  //  const thisApp = this;
+  initGeneral: function(){
+    const thisApp = this;
 
-  //  const homeElem = document.querySelector(select.containerOf.home);
-  //  thisApp.home = new Home(thisApp, homeElem);
+    const generalElem = document.querySelector(select.containerOf.general);
+    thisApp.home = new General(thisApp, generalElem);
 
-  //},
+  },
+
+  initLinks: function(){
+    const thisApp = this;
+
+    const linksElem = document.querySelector(select.containerOf.links);
+    thisApp.home = new Links(thisApp, linksElem);
+
+  },
 
   init: function(){
     const thisApp = this;
@@ -104,7 +153,9 @@ const app = {
     //thisApp.initMenu();
     //thisApp.initCart();
     //thisApp.initBooking();
-    //thisApp.initHome();
+    thisApp.initHome();
+    thisApp.initGeneral();
+    thisApp.initLinks();
   },
 
 };
