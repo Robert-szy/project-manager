@@ -4,6 +4,8 @@
   top: 0;
   bottom: 0;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   z-index: 2;
