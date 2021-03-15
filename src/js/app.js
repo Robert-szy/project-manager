@@ -1,8 +1,5 @@
 import {select, classNames, templates} from './settings.js';
 
-//import Home from  './components/Home.js';
-
-
 class Home {
   constructor(app, element){
     const thisHome = this;
@@ -60,6 +57,26 @@ class Links {
     thisLinks.dom = {};
     thisLinks.dom.wrapper = element;
     thisLinks.dom.wrapper.innerHTML = generatedHTML;
+  }
+}
+
+class Banners {
+  constructor(app, element){
+    const thisBanners = this;
+
+    thisBanners.render(element);
+
+    console.log('newBanners', thisBanners);
+  }
+
+  render(element){
+    const thisBanners = this;
+
+    const generatedHTML = templates.bannersPage();
+
+    thisBanners.dom = {};
+    thisBanners.dom.wrapper = element;
+    thisBanners.dom.wrapper.innerHTML = generatedHTML;
   }
 }
 
@@ -133,7 +150,7 @@ const app = {
     const thisApp = this;
 
     const generalElem = document.querySelector(select.containerOf.general);
-    thisApp.home = new General(thisApp, generalElem);
+    thisApp.general = new General(thisApp, generalElem);
 
   },
 
@@ -141,7 +158,15 @@ const app = {
     const thisApp = this;
 
     const linksElem = document.querySelector(select.containerOf.links);
-    thisApp.home = new Links(thisApp, linksElem);
+    thisApp.links = new Links(thisApp, linksElem);
+
+  },
+
+  initBanners: function(){
+    const thisApp = this;
+
+    const bannersElem = document.querySelector(select.containerOf.banners);
+    thisApp.banners = new Banners(thisApp, bannersElem);
 
   },
 
@@ -156,6 +181,7 @@ const app = {
     thisApp.initHome();
     thisApp.initGeneral();
     thisApp.initLinks();
+    thisApp.initBanners();
   },
 
 };

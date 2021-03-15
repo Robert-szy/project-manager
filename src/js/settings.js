@@ -5,6 +5,7 @@ export const select = {
     homePage: '#template-home-page',
     generalPage: '#template-general-page',
     linksPage: '#template-links-page',
+    bannersPage: '#template-banners-page',
   },
   containerOf: {
     pages: '#pages',
@@ -12,7 +13,7 @@ export const select = {
     general: '.general-page',
     //details: '.details-page',
     links: '.links-page',
-    //banners: '.banners-page',
+    banners: '.banners-page',
     //personal: '.personal-page',
     //payout: '.payout-page',
     //postback: '.postback-page',
@@ -47,6 +48,7 @@ export const templates = {
   homePage: Handlebars.compile(document.querySelector(select.templateOf.homePage).innerHTML),
   generalPage: Handlebars.compile(document.querySelector(select.templateOf.generalPage).innerHTML),
   linksPage: Handlebars.compile(document.querySelector(select.templateOf.linksPage).innerHTML),
+  bannersPage: Handlebars.compile(document.querySelector(select.templateOf.bannersPage).innerHTML),
 };
 
 

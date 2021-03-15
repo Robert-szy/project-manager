@@ -253,25 +253,13 @@
       <section id="links">
         <div class="links-page"></div>
       </section>
-      <section id="personal">
-        <div class="personal-page"></div>
+      <section id="banners">
+        <div class="banners-page"></div>
       </section>
 
       <!--
-      <section id="home">
-        <div class="home-page active"></div>
-      </section>
-      <section id="general">
-        <div class="general-page"></div>
-      </section>
       <section id="details">
         <div class="details-page"></div>
-      </section>
-      <section id="links">
-        <div class="links-page"></div>
-      </section>
-      <section id="banners">
-        <div class="banners-page"></div>
       </section>
       <section id="personal">
         <div class="personal-page"></div>
@@ -582,6 +570,40 @@
       </section>
     </script>
 
+    <script id="template-banners-page" type="text/x-handlebars-template">
+      <div class="overlay" id="overlay">
+        <div class="modal" id="bannersModal">
+          <h2>Add banners</h2>
+          <div class="btn-close js--close-modal">x</div>
+
+          <section class="banners">
+            <div class="banners-container">
+              <div class="banners-row">
+                <div class="banners-element">R1E1</div>
+                <div class="banners-element">R1E2</div>
+                <div class="banners-element">R1E3</div>
+              </div>
+              <div class="banners-row">
+                <div class="banners-element">R2E1</div>
+                <div class="banners-element">R2E2</div>
+                <div class="banners-element">R2E3</div>
+              </div>
+              <div class="banners-row">
+                <div class="banners-select">R3S1</div>
+                <div class="banners-select">R3S2</div>
+              </div>
+              <div class="banners-row">
+                <div class="banners-element">R4E1</div>
+                <div class="banners-element">R4E2</div>
+                <div class="banners-element">R4E3</div>
+              </div>
+            </div>
+          </section>
+
+          <button class="js--close-modal">Okay</button>
+        </div>
+      </div>
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
     <script src="js/app.js" type="module"></script>
