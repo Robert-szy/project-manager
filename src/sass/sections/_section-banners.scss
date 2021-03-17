@@ -27,7 +27,7 @@
 }
 
 .modal {
-  max-width: 1024px;
+  //max-width: 1024px;
   margin: auto;
   background-color: #ffffff;
   position: relative;
@@ -41,9 +41,24 @@
 
 .modal .btn-close {
   position: absolute;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
   top: 0;
   right: 0;
   padding: 5px 10px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $color-header-selected;
+    transition: $transition;
+  }
+
+  i {
+    color: $color-header;
+  }
 }
 
 .banners-container {
@@ -64,28 +79,126 @@
     text-align: left;
     align-self: start;
   }
+
+  .banners-row {
+    //flex: 1;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: nowrap;
+    flex-basis: 1;
+    background-color: $color-white;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: $color-header-selected;
+    //max-height: 160px;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  &:nth-of-type(3) {
+    flex-basis: 4;
+  }
 }
 
-.banners-row {
-  //flex: 1;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  flex-wrap: nowrap;
-  background-color: $color-white;
-  border-top: 1px solid;
-  border-bottom: 1px solid;
-  border-color: $color-header-selected;
-  height: 60px;
-  justify-content: space-around;
-  align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
+
 
 .banners-elem {
   flex: 1 30%;
   flex-grow: 1;
   text-align: center;
   background: none;
+}
+
+.banners-select {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  width: 50%;
+  margin: 20px;
+}
+
+.banners-select-row {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  line-height: 22px;
+  width: 100%;
+  align-items: center;
+  line-height: 22px;
+  justify-content: space-around;
+
+  label {
+    padding-left: 40px;
+    padding-bottom: 5px;
+    flex: 1 30%;
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+
+      &:checked ~ .checkmark {
+        background-color: $color-green;
+      }
+
+      &:checked ~ .checkmark:after {
+        display: block;
+      }
+    }
+
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 22px;
+      width: 22px;
+      background-color: $color-white;
+      border: 1px solid;
+
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 8px;
+        top: 4px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  i {
+    display: none;
+    justify-self: right;
+    font-size: inherit;
+    height: inherit;
+  }
+
+  &:hover {
+    background-color: $color-text-selected;
+    transition: $transition;
+    cursor: pointer;
+    transition: $transition;
+
+    i {
+      display: inline-block;
+    }
+  }
+
+  &:hover input ~ .checkmark {
+    background-color: #ccc;
+    transition: $transition;
+  }
 }

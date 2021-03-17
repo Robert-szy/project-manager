@@ -65,6 +65,7 @@ class Banners {
     const thisBanners = this;
 
     thisBanners.render(element);
+    thisBanners.initOverlay(app);
 
     console.log('newBanners', thisBanners);
   }
@@ -77,7 +78,44 @@ class Banners {
     thisBanners.dom = {};
     thisBanners.dom.wrapper = element;
     thisBanners.dom.wrapper.innerHTML = generatedHTML;
+
   }
+
+  //openModal(modal) {
+  //  document.querySelectorAll('#overlay > *').forEach(function(modal) {
+  //    modal.classList.remove('show');
+  //  });
+  //  document.querySelector('#overlay').classList.add('show');
+  //  document.querySelector(modal).classList.add('show');
+  //}
+
+  closeModal(thisApp) {
+    document.getElementById('overlay').classList.remove('show');
+    thisApp.activatePage('home');
+  }
+
+  initOverlay(app) {
+    const thisBanners = this;
+    document.querySelectorAll('#overlay .js--close-modal').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        thisBanners.closeModal(app);
+      });
+    });
+
+    document.querySelector('#overlay').addEventListener('click', function(e) {
+      if(e.target === this) {
+        thisBanners.closeModal(app);
+      }
+    });
+
+    document.addEventListener('keyup', function(e) {
+      if(e.keyCode === 27) {
+        thisBanners.closeModal(app);
+      }
+    });
+  }
+
 }
 
 const app = {
@@ -174,7 +212,6 @@ const app = {
     const thisApp = this;
 
     thisApp.initPages();
-    //thisApp.initData();
     //thisApp.initMenu();
     //thisApp.initCart();
     //thisApp.initBooking();
@@ -182,6 +219,7 @@ const app = {
     thisApp.initGeneral();
     thisApp.initLinks();
     thisApp.initBanners();
+    //thisApp.initOverlay();
   },
 
 };
